@@ -1,0 +1,38 @@
+{
+  "name": "genpark-constitutional-ai-harmlessness-evaluator-benchmark-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Constitutional AI harmlessness and helpfulness benchmark evaluator with RLAIF critique-revision loops and prompt injection guardrails.",
+  "author": "genpark",
+  "category": "ai-safety",
+  "tags": [
+    "constitutional-ai",
+    "rlaif",
+    "red-teaming",
+    "prompt-injection-defense",
+    "anthropic"
+  ],
+  "inputs": {
+    "model_identifier": {
+      "type": "string"
+    },
+    "constitution_principles_count": {
+      "type": "integer"
+    }
+  },
+  "outputs": {
+    "benchmark_run_id": {
+      "type": "string"
+    },
+    "harmlessness_score_pct": {
+      "type": "number"
+    },
+    "jailbreak_prompt_injection_defense_rate_pct": {
+      "type": "number"
+    },
+    "rl_from_ai_feedback_rlaif_converged": {
+      "type": "boolean"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
